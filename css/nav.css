@@ -1,0 +1,101 @@
+
+/* Main menu with dropdown child menus
+-------------------------------------------------------------- */
+
+/* -- start desktop menu styles - needs to be desktop first with 
+no media query otherwise IE8 won't recognise styles -- */
+
+/* ----- Set links widths - other dimensions are below ----- */
+nav[role="navigation"] li {
+	width: auto; /* -- sets width for top level links -- */
+}
+nav[role="navigation"] ul ul a {
+	width: 9.5em; /* -- sets width for sub-menu links -- */
+}
+nav[role="navigation"] ul ul ul {
+	left: 9.5em; /* -- positions third level, adjust this depending on the width set for the sub-menus -- */
+}
+/* ----- end links widths ----- */
+
+nav[role="navigation"] {
+	background: #eee;
+	display: block;
+	float: left;
+	width: 100%;
+}
+nav[role="navigation"] ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+nav[role="navigation"] li {
+	float: left;
+	position: relative;
+}
+nav[role="navigation"] a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	text-decoration: none;
+}
+nav[role="navigation"] ul ul {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	z-index: 99999;
+}
+nav[role="navigation"] ul ul ul {
+	top: 0;
+}
+nav[role="navigation"] ul ul a {
+	background: #dedede;
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	height: auto;
+}
+nav[role="navigation"] li:hover > a,
+nav[role="navigation"] ul ul :hover > a {
+	background: #dedede;
+}
+nav[role="navigation"] ul ul a:hover {
+	background: #cecece;
+}
+nav[role="navigation"] ul li:hover > ul {
+	display: block;
+}
+button#togglebutt {display: none;}
+
+/* -- end desktop menu styles -- */
+
+@media only screen and (max-width: 719px) {
+
+	nav#primarynav * { /* -- reset all menu styles -- */
+		position: relative; padding: 0; margin: 0; border: none; background: none; float: none; width: auto; height: auto; top: 0; left: 0; display: block; width: 100%; clear: both; line-height: normal;
+	}
+	button#togglebutt {
+		display: block;
+	}
+	nav#primarynav {
+		display: none;
+		overflow: hidden;
+	}
+	nav#primarynav ul a {
+		border-bottom: 1px solid #fff;
+		line-height: 2em;
+		padding: 0 1em;
+		text-align: center;
+		color: #363636;
+	}
+	nav#primarynav ul ul a {
+		background: #dedede;
+	}
+	nav#primarynav ul ul ul a {
+		background: #cecece;
+	}
+	nav#primarynav ul a:hover {
+		background: #c2c2c2;
+	}
+	
+} /* -- end mobile device menu style -- */

@@ -1,11 +1,11 @@
 /*
-Theme Name: 	Starkers
-Theme URI: 		http://viewportindustries.com/products/starkers
-Description: 	The totally nude Wordpress theme!
-Version: 		4.0
-Author: 		Elliot Jay Stocks & Keir Whitaker
-Author URI: 	http://viewportindustries.com
-Tags: 			starkers, naked, clean, basic
+Theme Name: 	Starkers Responsive v2
+Theme URI: 		http://zavadesign.com
+Description: 	Starkers Wordpress theme goes responsive - version 2!
+Version: 		2.0
+Author: 		David Rooney, Elliot Jay Stocks & Keir Whitaker
+Author URI: 	http://zavadesign.com
+Tags: 			starkers, naked, clean, responsive
 */
 
 /*
@@ -21,8 +21,6 @@ CONTENTS:
 /* ---------------------------------------------------------------------------------------------------------- 
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
-
-@import "css/reset.css";
 
 div,
 article,

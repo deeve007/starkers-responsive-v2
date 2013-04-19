@@ -1,7 +1,5 @@
 
 
-	[ NOTE: Work in progress, not ready for release ]
-	
 	STARKERS RESPONSIVE v2
 
 	Created by Zava Design & 
@@ -31,6 +29,9 @@
 	And more recently, any new site had to be 
 	responsive of course. If you're not building
 	responsive sites yet then you need to start now!
+	So theme is built on a simple, clean responsive
+	CSS framework, including a repsonsive menu, and
+	also fitVid JS so embedded videos are responsive.
 	
 	And finally, since I had to edit the template
 	code a little in order to responsify the theme,

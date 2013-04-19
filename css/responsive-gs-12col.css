@@ -1,0 +1,66 @@
+/* 
+	12 COLUMN - RESPONSIVE GRID SYSTEM
+	RE-DEVELOPED BY DAVID ROONEY TO ALLOW FOR MULTI-LEVEL GRID ROWS AND ADDED 
+	MEDIA QUERY SUPPORT FOR IE8, WHICH IS REQUIRED FOR A MOBILE FIRST APPROACH.
+	( WITH THANKS TO DENIS LEBLANC FOR THE ORIGINAL - http://responsive.gs )
+	URL - http://zavadesign.com
+	VERSION - 1.0
+	LICENSED UNDER GPL & MIT
+*/
+
+
+/* 	SET ALL ELEMENTS BOX-SIZING TO BORDER-BOX
+	If you need support for IE7 and lower use polyfill: https://github.com/Schepp/box-sizing-polyfill */
+* { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* MAIN CONTAINER */
+.container { 
+	margin: 0 auto;
+}
+
+/* SELF CLEARING FLOATS - CLEARFIX METHOD */
+.row:after, .col:after, .clr:after, .group:after { 
+	content: ""; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}
+										  
+/* DEFAULT ROW STYLES */
+.row { 
+	clear: both;
+}
+
+/* DEFAULT COLUMN STYLES */
+.col { 
+	display: block;
+	float: left;
+	width: 100%;
+	margin-bottom: 1.4em; /* set according to preference */
+}
+
+/* MEDIA QUERIES FOR DISPLAYS +768px */
+@media ( min-width : 768px ) {
+	.container { width: 96%; } /* enable some nice margins around layout for larger screen sizes */
+	.row { margin-left: -2%; } /* enables multi-level grid layouts for portfolios or similar rather than using first-child selector */
+	.col { margin-left: 2%; }
+	
+	/* column widths +768px */
+	.span_1 { width: 6.33%; }
+	.span_2 { width: 14.66%; }
+	.span_3 { width: 23.0%; }
+	.span_4 { width: 31.32%; }
+	.span_5 { width: 39.65%; }
+	.span_6 { width: 48.0%; }
+	.span_7 { width: 56.35%; }
+	.span_8 { width: 64.67%; }
+	.span_9 { width: 73.0%; }
+	.span_10 { width: 81.33%; }
+	.span_11 { width: 89.65%; }
+	.span_12 { width: 98%; }
+}

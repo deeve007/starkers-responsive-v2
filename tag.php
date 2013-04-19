@@ -28,4 +28,5 @@
 <h2>No posts to display in <?php echo single_tag_title( '', false ); ?></h2>
 <?php endif; ?>
 
+<?php get_sidebar(); ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

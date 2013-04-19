@@ -11,6 +11,9 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<h2>Page not found</h2>
+<article class="col span_8">
+	<h2>Page not found</h2>
+</article>
 
+<?php get_sidebar(); ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
