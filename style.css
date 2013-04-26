@@ -12,14 +12,68 @@ Tags: 			starkers, naked, clean, responsive
 ===========================
 CONTENTS:
 
-01 Sensible defaults
-02 Typography
-03 Media queries 
+01 Reset
+02 Sensible defaults
+03 Typography
+04 Forms 
+05 Media queries 
 ===========================
 */
 
 /* ---------------------------------------------------------------------------------------------------------- 
-01 Sensible defaults ----------------------------------------------------------------------------------------
+01 Reset ---------------------------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------------------------------- */
+/* Included here rather than seperate stylesheet to reduce server calls */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, 
+code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, 
+figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video  { 
+	margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; 
+}        
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section  { display: block; }
+audio, canvas, video  { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+html { 
+	font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; 
+}
+body { margin: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; }          
+a { color:blue; }
+a:focus { outline: thin dotted; }
+li { list-style:none; }
+abbr[title] { border-bottom:none; }
+b, strong { font-weight: 700; }
+i, em, dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins  { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+label { cursor: pointer; }
+input, 
+select, 
+textarea { font-size: 100%; margin: 0; }
+button, input { line-height: normal; *overflow: visible; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+02 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
 div,
@@ -35,7 +89,7 @@ body 				{ background:#fff; /* Don't forget to style your body to avoid user ove
 ::selection 		{ background:#ff0; color:#333; }
 
 /* ---------------------------------------------------------------------------------------------------------- 
-02 Typography -----------------------------------------------------------------------------------------------
+03 Typography -----------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 /*
 
@@ -50,7 +104,13 @@ body 				{ background:#fff; /* Don't forget to style your body to avoid user ove
 
 body,
 input,
-textarea 			{ /* We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first */ }
+textarea  { /* We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first */ 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: #333;
+}
 
 h1, 
 h2, 
@@ -60,7 +120,64 @@ h5,
 h6 					{ font-weight:bold; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
 
 /* ---------------------------------------------------------------------------------------------------------- 
-03 Media queries (using a mobile-first approach) ------------------------------------------------------------
+04 Forms -----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: 1px solid #ccc;
+    border-color: #ccc #ccc #bbb #ccc;
+    border-radius: 3px;
+    background: #e6e6e6;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+    color: rgba(0,0,0,.8);
+    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+    font-size: 12px;
+	font-size: 0.75rem;
+    line-height: 1;
+    padding: 0.4em 1.4em 0.5em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}
+button:hover, 
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    border-color: #ccc #bbb #aaa #bbb;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+}
+input[type=text],
+input[type=email],
+textarea {
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	resize: vertical;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    color: #111;
+}
+input[type=text],
+input[type=email] {
+    padding: 3px;
+}
+textarea {
+    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+    padding-left: 3px;
+    vertical-align: top; /* Improves readability and alignment in all browsers */
+    width: 98%;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- 
+05 Media queries (using a mobile-first approach) ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
 /* 400 and up */

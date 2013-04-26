@@ -2,7 +2,7 @@
 	
 	<header>
 		<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php bloginfo( 'description' ); ?>
+		<h2><?php bloginfo( 'description' ); ?></h2>
 		
 		<button id="togglebutt">Show/hide menu</button><!-- for mobile menu -->
 		<nav id="primarynav" role="navigation">

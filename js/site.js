@@ -1,6 +1,9 @@
 
 	jQuery(document).ready(function($) {
 
+		// fitVid js - Target your .container, .wrapper, .post, etc.
+		$(".container").fitVids();
+		
 		// mobile menu toggle function
 		$(function() {
 		    $('#togglebutt').click(function() {
@@ -22,8 +25,5 @@
 				$('nav[role="navigation"]').hide();
 			}
         });
-		
-		// fitVid js - Target your .container, .wrapper, .post, etc.
-		$(".container").fitVids();
 
 	});
