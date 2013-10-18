@@ -3,6 +3,7 @@
 
 #primarynav {
 	float: none;
+	display: none;
 }
 #togglebutt {
 	clear: both;
